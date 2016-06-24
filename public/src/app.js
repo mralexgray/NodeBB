@@ -26,7 +26,8 @@ app.cacheBuster = null;
 	app.load = function() {
 		app.loadProgressiveStylesheet();
 
-		var url = ajaxify.start(window.location.pathname.slice(1) + window.location.search + window.location.hash, true);
+		var url = ajaxify.start(window.location.pathname.slice(1) + window.location.search + window.location.hash);
+		ajaxify.updateHistory(url, true);
 		ajaxify.end(url, app.template);
 
 		handleStatusChange();
@@ -117,7 +118,7 @@ app.cacheBuster = null;
 			title: '[[global:alert.success]]',
 			message: message,
 			type: 'success',
-			timeout: timeout ? timeout : 2000
+			timeout: timeout ? timeout : 5000
 		});
 	};
 
@@ -126,7 +127,7 @@ app.cacheBuster = null;
 			title: '[[global:alert.error]]',
 			message: message,
 			type: 'danger',
-			timeout: timeout ? timeout : 5000
+			timeout: timeout ? timeout : 10000
 		});
 	};
 

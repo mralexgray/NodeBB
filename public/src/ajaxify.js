@@ -61,16 +61,21 @@ $(document).ready(function() {
 			apiXHR.abort();
 		}
 
-		url = ajaxify.start(url, quiet);
-
 		if (!window.location.pathname.match(/\/(403|404)$/g)) {
 			app.previousUrl = window.location.href;
 		}
+
+		url = ajaxify.start(url);
 
 		$('body').removeClass(ajaxify.data.bodyClass);
 		$('#footer, #content').removeClass('hide').addClass('ajaxifying');
 
 		ajaxify.loadData(url, function(err, data) {
+
+			if (!err || (err && err.data && (parseInt(err.data.status, 10) !== 302 && parseInt(err.data.status, 10) !== 308))) {
+				ajaxify.updateHistory(url, quiet);
+			}
+
 			if (err) {
 				return onAjaxError(err, url, callback, quiet);
 			}
@@ -100,18 +105,21 @@ $(document).ready(function() {
 	};
 
 
-	ajaxify.start = function(url, quiet) {
+	ajaxify.start = function(url) {
 		url = ajaxify.removeRelativePath(url.replace(/^\/|\/$/g, ''));
 
 		$(window).trigger('action:ajaxify.start', {url: url});
 
+		return url;
+	};
+
+	ajaxify.updateHistory = function(url, quiet) {
 		ajaxify.currentPage = url.split(/[?#]/)[0];
 		if (window.history && window.history.pushState) {
 			window.history[!quiet ? 'pushState' : 'replaceState']({
 				url: url
 			}, url, RELATIVE_PATH + '/' + url);
 		}
-		return url;
 	};
 
 	function onAjaxError(err, url, callback, quiet) {
@@ -301,6 +309,10 @@ $(document).ready(function() {
 				} else {
 					return e.preventDefault();
 				}
+			}
+
+			if (internalLink && $(this).attr('href').endsWith('.rss')) {
+				return;
 			}
 
 			if (hrefEmpty(this.href) || this.protocol === 'javascript:' || $(this).attr('href') === '#') {
