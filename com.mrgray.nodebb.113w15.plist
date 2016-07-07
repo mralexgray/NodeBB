@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Disabled</key>
+	<false/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/usr/local/bin</string>
+	</dict>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<true/>
+	</dict>
+	<key>Label</key>
+	<string>com.mrgray.nodebb.113w15</string>
+	<key>Nice</key>
+	<integer>-20</integer>
+	<key>ProcessType</key>
+	<string>Standard</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>sh</string>
+		<string>-C</string>
+		<string>exec &gt; &gt;(logger -s -t '/sr/local/bin/node /node/nodeBB/nodebb dev') 2&gt;&amp;1</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/tmp/com.mrgray.nodebb.113w15.err</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/com.mrgray.nodebb.113w15.out</string>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+	<key>WorkingDirectory</key>
+	<string>/node/nodeBB</string>
+</dict>
+</plist>
