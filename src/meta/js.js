@@ -61,7 +61,6 @@ module.exports = function(Meta) {
 				'public/src/client/category.js',
 				'public/src/client/categoryTools.js',
 
-				'public/src/modules/csrf.js',
 				'public/src/modules/translator.js',
 				'public/src/modules/notifications.js',
 				'public/src/modules/chat.js',
@@ -93,7 +92,7 @@ module.exports = function(Meta) {
 		var numBridged = 0,
 			addRoute = function(relPath) {
 				var relativePath = nconf.get('relative_path');
-				
+
 				app.get(relativePath + '/src/modules/' + relPath, function(req, res) {
 					return res.sendFile(path.join(__dirname, '../../', Meta.js.scripts.modules[relPath]), {
 						maxAge: app.enabled('cache') ? 5184000000 : 0
@@ -161,11 +160,18 @@ module.exports = function(Meta) {
 					});
 				}
 
-				Meta.js.commitToFile(target, function() {					
+				if (nconf.get('local-assets') === undefined || nconf.get('local-assets') !== false) {
+					return Meta.js.commitToFile(target, function() {
+						if (typeof callback === 'function') {
+							callback();
+						}
+					});
+				} else {
+					emitter.emit('meta:js.compiled');
 					if (typeof callback === 'function') {
-						callback();
+						return callback();
 					}
-				});
+				}
 
 				break;
 			case 'error':

@@ -58,6 +58,8 @@ define('forum/topic/postTools', ['share', 'navigator', 'components', 'translator
 		postEl.find('[component="post/delete"]').toggleClass('hidden', isDeleted);
 		postEl.find('[component="post/restore"]').toggleClass('hidden', !isDeleted);
 		postEl.find('[component="post/purge"]').toggleClass('hidden', !isDeleted);
+
+		postEl.find('.dropdown-menu').html('');
 	};
 
 	PostTools.updatePostCount = function(postCount) {
@@ -375,15 +377,18 @@ define('forum/topic/postTools', ['share', 'navigator', 'components', 'translator
 			}
 
 			templates.parse('partials/modals/votes_modal', data, function(html) {
-				var dialog = bootbox.dialog({
-					title: 'Voters',
-					message: html,
-					className: 'vote-modal',
-					show: true
-				});
-
-				dialog.on('click', function() {
-					dialog.modal('hide');
+				translator.translate(html, function(translated) {
+					var dialog = bootbox.dialog({
+						title: 'Voters',
+						message: translated,
+						className: 'vote-modal',
+						show: true
+					});
+	
+					dialog.on('click', function() {
+						dialog.modal('hide');
+					});
+				    
 				});
 			});
 		});

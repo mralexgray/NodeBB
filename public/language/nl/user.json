@@ -6,6 +6,7 @@
     "postcount": "Aantal geplaatste berichten",
     "email": "E-mail",
     "confirm_email": "Bevestig e-mail",
+    "account_info": "Account Info",
     "ban_account": "Verban gebruiker",
     "ban_account_confirm": "Weet u zeker dat u deze gebruiker wilt verbannen?",
     "unban_account": "Verbanning intrekken",
@@ -95,8 +96,8 @@
     "delay_image_loading": "Afbeeldingen Laden Uitstellen",
     "image_load_delay_help": "Indien ingeschakeld zullen afbeeldingen in topics niet laden totdat ze het scherm inscrollen",
     "scroll_to_my_post": "Toon het nieuwe bericht na het plaatsen van een antwoord",
-    "follow_topics_you_reply_to": "Volg de onderwerpen waarop ik gereageerd heb",
-    "follow_topics_you_create": "Volg de onderwerpen waarvan ik de oorspronkelijke auteur ben",
+    "follow_topics_you_reply_to": "Watch topics that you reply to",
+    "follow_topics_you_create": "Watch topics you create",
     "grouptitle": "Groepstitel",
     "no-group-title": "Geen groepstitel",
     "select-skin": "Selecteer een skin",
@@ -107,5 +108,11 @@
     "custom_route_help": "Voer een route naam hier, zonder enige voorafgaande schuine streep (zoals, \"recente\" of \"populaire\")",
     "sso.title": "Single Sign-on Services",
     "sso.associated": "Geassocieerd met",
-    "sso.not-associated": "Klik hier om geassocieerd te worden met"
+    "sso.not-associated": "Klik hier om geassocieerd te worden met",
+    "info.latest-flags": "Latest Flags",
+    "info.no-flags": "No Flagged Posts Found",
+    "info.ban-history": "Recent Ban History",
+    "info.no-ban-history": "This user has never been banned",
+    "info.banned-until": "Banned until %1",
+    "info.banned-permanently": "Banned permanently"
 }

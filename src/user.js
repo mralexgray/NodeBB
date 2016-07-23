@@ -33,6 +33,7 @@ var utils = require('../public/src/utils');
 	require('./user/approval')(User);
 	require('./user/invite')(User);
 	require('./user/password')(User);
+	require('./user/info')(User);
 
 	User.updateLastOnlineTime = function(uid, callback) {
 		callback = callback || function() {};
@@ -267,7 +268,7 @@ var utils = require('../public/src/utils');
 				} else {
 					// If they are banned, see if the ban has expired
 					db.sortedSetScore('users:banned:expire', uid, function(err, score) {
-						var stillBanned = Date.now() < score;
+						var stillBanned = !score || Date.now() < score;
 
 						if (!stillBanned) {
 							async.parallel([

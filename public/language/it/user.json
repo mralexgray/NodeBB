@@ -6,6 +6,7 @@
     "postcount": "Numero post",
     "email": "Email",
     "confirm_email": "Conferma Email",
+    "account_info": "Account Info",
     "ban_account": "BAN dell'account",
     "ban_account_confirm": "Sei sicuro di voler bannare questo utente?",
     "unban_account": "Togli il BAN",
@@ -95,8 +96,8 @@
     "delay_image_loading": "Delay Image Loading",
     "image_load_delay_help": "If enabled, images in topics will not load until they are scrolled into view",
     "scroll_to_my_post": "After posting a reply, show the new post",
-    "follow_topics_you_reply_to": "Segui le discussioni a cui hai risposto",
-    "follow_topics_you_create": "Segui le discussioni che hai iniziato",
+    "follow_topics_you_reply_to": "Watch topics that you reply to",
+    "follow_topics_you_create": "Watch topics you create",
     "grouptitle": "Group Title",
     "no-group-title": "Nessun titolo al gruppo",
     "select-skin": "Seleziona uno Skin",
@@ -107,5 +108,11 @@
     "custom_route_help": "Enter a route name here, without any preceding slash (e.g. \"recent\", or \"popular\")",
     "sso.title": "Servizi Single-Sign-On",
     "sso.associated": "Associa con",
-    "sso.not-associated": "Clicca qui per associare con"
+    "sso.not-associated": "Clicca qui per associare con",
+    "info.latest-flags": "Latest Flags",
+    "info.no-flags": "No Flagged Posts Found",
+    "info.ban-history": "Recent Ban History",
+    "info.no-ban-history": "This user has never been banned",
+    "info.banned-until": "Banned until %1",
+    "info.banned-permanently": "Banned permanently"
 }

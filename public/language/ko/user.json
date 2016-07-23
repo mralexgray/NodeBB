@@ -6,6 +6,7 @@
     "postcount": "게시물 작성 수",
     "email": "이메일",
     "confirm_email": "이메일 확인",
+    "account_info": "Account Info",
     "ban_account": "차단된 계정",
     "ban_account_confirm": "이 사용자를 차단하시겠습니까?",
     "unban_account": "차단 해제",
@@ -95,8 +96,8 @@
     "delay_image_loading": "이미지 로딩 지연",
     "image_load_delay_help": "활성화 되면 이미지 위치로 스크롤을 움직이기 전까지 이미지가 로드 되지 않습니다.",
     "scroll_to_my_post": "답글 게시 후 새 포스트 보여주기",
-    "follow_topics_you_reply_to": "답글 단 게시물을 팔로우 합니다.",
-    "follow_topics_you_create": "생성한 주제를 팔로우 합니다.",
+    "follow_topics_you_reply_to": "Watch topics that you reply to",
+    "follow_topics_you_create": "Watch topics you create",
     "grouptitle": "그룹 주제",
     "no-group-title": "그룹 이름이 없습니다.",
     "select-skin": "스킨 선택",
@@ -107,5 +108,11 @@
     "custom_route_help": "라우팅 이름을 앞쪽 '/' 없이 입력해주세요 (예: \"최근 목록\", \"인기 게시물\")",
     "sso.title": "통합 인증 서비스",
     "sso.associated": "연관짓기 - ",
-    "sso.not-associated": "이 곳을 클리하여 연관지으세요."
+    "sso.not-associated": "이 곳을 클리하여 연관지으세요.",
+    "info.latest-flags": "Latest Flags",
+    "info.no-flags": "No Flagged Posts Found",
+    "info.ban-history": "Recent Ban History",
+    "info.no-ban-history": "This user has never been banned",
+    "info.banned-until": "Banned until %1",
+    "info.banned-permanently": "Banned permanently"
 }

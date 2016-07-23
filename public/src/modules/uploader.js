@@ -2,7 +2,7 @@
 
 /* globals define, templates */
 
-define('uploader', ['csrf', 'translator'], function(csrf, translator) {
+define('uploader', ['translator'], function(translator) {
 
 	var module = {};
 
@@ -37,6 +37,7 @@ define('uploader', ['csrf', 'translator'], function(csrf, translator) {
 			uploadForm.find('#params').val(JSON.stringify(data.params));
 
 			uploadModal.find('#fileUploadSubmitBtn').on('click', function() {
+				$(this).addClass('disabled');
 				uploadForm.submit();
 			});
 
@@ -54,6 +55,9 @@ define('uploader', ['csrf', 'translator'], function(csrf, translator) {
 	function onSubmit(uploadModal, fileSize, callback) {
 		function showAlert(type, message) {
 			module.hideAlerts(uploadModal);
+			if (type === 'error') {
+				uploadModal.find('#fileUploadSubmitBtn').removeClass('disabled');
+			}
 			uploadModal.find('#alert-' + type).translateText(message).removeClass('hide');
 		}
 
@@ -72,7 +76,7 @@ define('uploader', ['csrf', 'translator'], function(csrf, translator) {
 
 		uploadModal.find('#uploadForm').ajaxSubmit({
 			headers: {
-				'x-csrf-token': csrf.get()
+				'x-csrf-token': config.csrf_token
 			},
 			error: function(xhr) {
 				xhr = maybeParse(xhr);

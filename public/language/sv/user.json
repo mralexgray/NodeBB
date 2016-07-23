@@ -6,6 +6,7 @@
     "postcount": "Antal inlägg",
     "email": "E-post",
     "confirm_email": "Bekräfta e-postadress ",
+    "account_info": "Account Info",
     "ban_account": "Bannlys konto",
     "ban_account_confirm": "Vill du verkligen bannlysa den här användaren?",
     "unban_account": "Ta bort bannlysning",
@@ -95,8 +96,8 @@
     "delay_image_loading": "Fördröj inladdning av bilder",
     "image_load_delay_help": "Aktivera för att hindra bilder ifrån att ladda in, innan de skrollats fram på skärmen. ",
     "scroll_to_my_post": "Visa det nya inlägget när ett svar har postats",
-    "follow_topics_you_reply_to": "Följ ämnen som du svarar på",
-    "follow_topics_you_create": "Följ ämnen du skapar",
+    "follow_topics_you_reply_to": "Watch topics that you reply to",
+    "follow_topics_you_create": "Watch topics you create",
     "grouptitle": "Grupptitel",
     "no-group-title": "Ingen titel på gruppen",
     "select-skin": "Välj ett Skin",
@@ -107,5 +108,11 @@
     "custom_route_help": "Skriv in ett sökvägsnamn här, utan föregående slash. (tex \"recent\" eller \"popular\")",
     "sso.title": "Single Sign-on-tjänster",
     "sso.associated": "Associerad med",
-    "sso.not-associated": "Klicka här för att associera med"
+    "sso.not-associated": "Klicka här för att associera med",
+    "info.latest-flags": "Latest Flags",
+    "info.no-flags": "No Flagged Posts Found",
+    "info.ban-history": "Recent Ban History",
+    "info.no-ban-history": "This user has never been banned",
+    "info.banned-until": "Banned until %1",
+    "info.banned-permanently": "Banned permanently"
 }

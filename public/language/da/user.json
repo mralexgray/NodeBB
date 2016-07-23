@@ -6,6 +6,7 @@
     "postcount": "Antal indlæg",
     "email": "Email",
     "confirm_email": "Bekræft email",
+    "account_info": "Account Info",
     "ban_account": "Ban Konto",
     "ban_account_confirm": "Ønsker du virkelig at banne denne konto?",
     "unban_account": "Afban Konto",
@@ -95,8 +96,8 @@
     "delay_image_loading": "Delay Image Loading",
     "image_load_delay_help": "If enabled, images in topics will not load until they are scrolled into view",
     "scroll_to_my_post": "After posting a reply, show the new post",
-    "follow_topics_you_reply_to": "Følg emner du har skrevet indlæg i",
-    "follow_topics_you_create": "Følg emner du opretter",
+    "follow_topics_you_reply_to": "Watch topics that you reply to",
+    "follow_topics_you_create": "Watch topics you create",
     "grouptitle": "Group Title",
     "no-group-title": "Ingen gruppe titel",
     "select-skin": "Vælg et skin",
@@ -107,5 +108,11 @@
     "custom_route_help": "Indtast et rute navn her, uden nogle foregående skråstreg (f.eks. \"nyligt\" eller \"populært\")",
     "sso.title": "Enkeltgangs Sign-on Servicer",
     "sso.associated": "Forbundet med",
-    "sso.not-associated": "Klik her for at forbinde med"
+    "sso.not-associated": "Klik her for at forbinde med",
+    "info.latest-flags": "Latest Flags",
+    "info.no-flags": "No Flagged Posts Found",
+    "info.ban-history": "Recent Ban History",
+    "info.no-ban-history": "This user has never been banned",
+    "info.banned-until": "Banned until %1",
+    "info.banned-permanently": "Banned permanently"
 }

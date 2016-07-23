@@ -6,6 +6,7 @@
     "postcount": "Số bài viết",
     "email": "Email",
     "confirm_email": "Xác nhận email",
+    "account_info": "Account Info",
     "ban_account": "Cấm thành viên",
     "ban_account_confirm": "Bạn có chắc bạn muốn cấm thành viên này?",
     "unban_account": "Bỏ cấm thành viên",
@@ -95,8 +96,8 @@
     "delay_image_loading": "Việc tải ảnh đang bị chậm",
     "image_load_delay_help": "Nếu được bật, toàn bộ ảnh trong chủ đề sẽ chỉ được tải khi người dùng kéo chuột tới",
     "scroll_to_my_post": "Sau khi đăng một trả lời thì hiển thị bài viết mới",
-    "follow_topics_you_reply_to": "Theo dõi chủ đề bạn trả lời",
-    "follow_topics_you_create": "Theo dõi chủ đề bạn tạo",
+    "follow_topics_you_reply_to": "Watch topics that you reply to",
+    "follow_topics_you_create": "Watch topics you create",
     "grouptitle": "Tên nhóm",
     "no-group-title": "Không có tên nhóm",
     "select-skin": "Chọn một giao diện",
@@ -107,5 +108,11 @@
     "custom_route_help": "Nhập đường dẫn ở đây, mà không có dấu gạch chéo ở trước (chẳng hạn \"recent\" hoặc \"popular)",
     "sso.title": "Đăng nhập một lần",
     "sso.associated": "Đã liên kết với",
-    "sso.not-associated": "Nhấn vào đây để liên kết với"
+    "sso.not-associated": "Nhấn vào đây để liên kết với",
+    "info.latest-flags": "Latest Flags",
+    "info.no-flags": "No Flagged Posts Found",
+    "info.ban-history": "Recent Ban History",
+    "info.no-ban-history": "This user has never been banned",
+    "info.banned-until": "Banned until %1",
+    "info.banned-permanently": "Banned permanently"
 }
