@@ -7,13 +7,10 @@
 	<key>EnvironmentVariables</key>
 	<dict>
 		<key>PATH</key>
-		<string>/usr/local/bin</string>
+		<string>/usr/local/bin:/node/NodeBB</string>
 	</dict>
 	<key>KeepAlive</key>
-	<dict>
-		<key>SuccessfulExit</key>
-		<true/>
-	</dict>
+	<false/>
 	<key>Label</key>
 	<string>com.mrgray.nodebb.113w15</string>
 	<key>Nice</key>
@@ -22,9 +19,8 @@
 	<string>Standard</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>sh</string>
-		<string>-C</string>
-		<string>exec &gt; &gt;(logger -s -t '/sr/local/bin/node /node/nodeBB/nodebb dev') 2&gt;&amp;1</string>
+		<string>./nodebb</string>
+		<string>start</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
@@ -35,6 +31,6 @@
 	<key>ThrottleInterval</key>
 	<integer>10</integer>
 	<key>WorkingDirectory</key>
-	<string>/node/nodeBB</string>
+	<string>/node/NodeBB</string>
 </dict>
 </plist>
